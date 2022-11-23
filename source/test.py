@@ -21,7 +21,9 @@ class MathOperations:
 
 
 class StringOperations:
-    url_pattern = r"(?P<root_url>https://[a-zA-Z\-0-9]+\/*svn\/*[a-zA-Z0-9\.*]+)\/*\/*[a-zA-Z0-9\.]*\/*[tags|branches|trunk]+\/*\/*(?P<release_type>Hotfix|ReleaseCandidate)*\/*(?P<project_name>[a-zA-Z\-0-9]+)(Release|\_|\-)(?P<version>[0-9\.]+)"
+    url_pattern = (
+        r"(?P<root_url>https://[a-zA-Z\-0-9]+\/*svn\/*[a-zA-Z0-9\.*]+)\/*\/*[a-zA-Z0-9\.]*\/*[tags|branches|trunk]+\/*\/*(?P<release_type>Hotfix|ReleaseCandidate)*\/*(?P<project_name>[a-zA-Z\-0-9]+)(Release|\_|\-)(?P<version>[0-9\.]+)"
+    )
 
     @staticmethod
     def get_all_indices(index_string: str) -> list[int]:
@@ -84,5 +86,4 @@ if __name__ == "__main__":
     square.inputSides()
     print("The area of the square is {}".format(square.findArea()))
 
-    # Write a class for a rectangle
-
+    # Write a class implementation for a rectangle
