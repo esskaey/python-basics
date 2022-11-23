@@ -22,9 +22,21 @@ class MathOperations:
 
 
 class StringOperations:
-    url_pattern = (
-        r"(?P<root_url>https://[a-zA-Z\-0-9]+\/*svn\/*[a-zA-Z0-9\.*]+)\/*\/*[a-zA-Z0-9\.]*\/*[tags|branches|trunk]+\/*\/*(?P<release_type>Hotfix|ReleaseCandidate)*\/*(?P<project_name>[a-zA-Z\-0-9]+)(Release|\_|\-)(?P<version>[0-9\.]+)"
-    )
+    url_pattern = r"(?P<root_url>https://[a-zA-Z\-0-9]+\/*svn\/*[a-zA-Z0-9\.*]+)\/*\/*[a-zA-Z0-9\.]*\/*[tags|branches|trunk]+\/*\/*(?P<release_type>Hotfix|ReleaseCandidate)*\/*(?P<project_name>[a-zA-Z\-0-9]+)(Release|\_|\-)(?P<version>[0-9\.]+)"
+
+    @staticmethod
+    def get_string_from_substring(str1: str, str2: str, str3: str) -> str:
+        """_summary_
+
+        Args:
+            str1 (str): substring
+            str2 (str): substring
+            str3 (str): substring
+
+        Returns:
+            str: output string => https:/{str1}/{str2}?option='{str3}'
+        """
+        pass
 
     @staticmethod
     def get_all_indices(index_string: str) -> list[int]:
