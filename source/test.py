@@ -83,3 +83,6 @@ if __name__ == "__main__":
     square = Square()
     square.inputSides()
     print("The area of the square is {}".format(square.findArea()))
+
+    # Write a class for a rectangle
+
