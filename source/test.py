@@ -1,4 +1,5 @@
 import re
+from polygon import Polygon
 
 
 class MathOperations:
@@ -59,6 +60,14 @@ class StringOperations:
             raise ValueError("--- Invalid URL for parse: {} ---".format(input_string))
 
 
+class Square(Polygon):
+    def __init__(self):
+        super().__init__(1)
+
+    def findArea(self):
+        return self.sides[0] * self.sides[0]
+
+
 if __name__ == "__main__":
     n = 10
     # prints a number
@@ -70,3 +79,7 @@ if __name__ == "__main__":
     StringOperations.get_url_components(
         "https://server/svn/ProjectA/subcategory/tags/ProjectARelease1.2.3.4"
     )
+
+    square = Square()
+    square.inputSides()
+    print("The area of the square is {}".format(square.findArea()))
