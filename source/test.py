@@ -11,11 +11,12 @@ class MathOperations:
           -> error if n less than zero
           -> if n = 1, return 0
           -> if n == 2 , return 1
+          -> if n > 2, then use above formula to return nth fibonacci
         Args:
-            n (int): _description_
+            n (int): nth fibonacci
 
         Returns:
-            int: _description_
+            int: sum till nth fibonacci
         """
         pass
 
@@ -39,7 +40,7 @@ class StringOperations:
             index_string (str): contains input string pattern, ex. "1..24,26,27,29"
 
         Returns:
-            list[str]:
+            list[int]: [1,2,3,....24,26,27,29]
         """
         pass
 
@@ -73,7 +74,7 @@ class Square(Polygon):
 if __name__ == "__main__":
     n = 10
     # prints a number
-    print(MathOperations.calculate_fibonacci(n))
+    # call the calculate fibonacci method to get output here
     # prints a list of integers
     print(StringOperations.get_all_indices(index_string="1..24,26,29"))
     # match a pattern and return dict
